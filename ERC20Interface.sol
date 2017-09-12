@@ -34,8 +34,8 @@ interface Exchange {
 
     // NON-CONSTANT METHODS
     
-    function deposit(address _token, uint _amount) payable returns (bool success) {}
-    function withdraw(address _token, uint _amount) returns (bool success) {}
+    function deposit(address _token, uint _amount) payable returns (bool success);
+    function withdraw(address _token, uint _amount) returns (bool success);
     function fillOrder(address[5] orderAddresses, uint[6] orderValues, uint fillTakerTokenAmount, bool shouldThrowOnInsufficientBalanceOrAllowance, uint8 v, bytes32 r, bytes32 s) returns (uint filledTakerTokenAmount);
     function cancelOrder(address[5] orderAddresses, uint[6] orderValues, uint cancelTakerTokenAmount) returns (uint);
     function fillOrKillOrder(address[5] orderAddresses, uint[6] orderValues, uint fillTakerTokenAmount, uint8 v, bytes32 r, bytes32 s);
@@ -85,6 +85,10 @@ contract Exchange {
     event LogError(uint8 indexed errorId, bytes32 indexed orderHash);
 
     // NON-CONSTANT METHODS
+    
+    function deposit(address _token, uint _amount) payable returns (bool success) {}
+    
+    function withdraw(address _token, uint _amount) returns (bool success) {}
 
     function fillOrder(
         address[5] orderAddresses,
