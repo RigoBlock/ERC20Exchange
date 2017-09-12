@@ -2,7 +2,7 @@
   Copyright 2017 RigoBlock, Rigo Investment Sagl
   Copyright 2017 ZeroEx Intl.
   
-  Original Code from 0x project, this contract from RigoBlock allows interaction with the 0x exchange protocol
+  extracted from the 0x protocol, this contract from RigoBlock allows interaction with the decentralized exchanges
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@
 pragma solidity 0.4.15;
 
 
-/// @title Exchange Interface - Facilitates interaction with the 0x exchange protocol.
+/// @title Exchange Interface - Facilitates interaction with decentralized exchanges.
 /// @author Gabriele Rigo - <gab@rigoblock.com>
 
 interface Exchange {
